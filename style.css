@@ -1,0 +1,200 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Caveat", cursive;
+  box-sizing: border-box;
+}
+.container {
+  width: 100%;
+  min-height: 100vh;
+  padding: 10px;
+  background-image: radial-gradient(
+      circle at 28% 44%,
+      hsla(77, 0%, 3%, 0.05) 0%,
+      hsla(77, 0%, 3%, 0.05) 1%,
+      transparent 1%,
+      transparent 73%,
+      transparent 73%,
+      transparent 100%
+    ),
+    radial-gradient(
+      circle at 81% 65%,
+      hsla(77, 0%, 3%, 0.05) 0%,
+      hsla(77, 0%, 3%, 0.05) 18%,
+      transparent 18%,
+      transparent 77%,
+      transparent 77%,
+      transparent 100%
+    ),
+    radial-gradient(
+      circle at 51% 45%,
+      hsla(77, 0%, 3%, 0.05) 0%,
+      hsla(77, 0%, 3%, 0.05) 11%,
+      transparent 11%,
+      transparent 12%,
+      transparent 12%,
+      transparent 100%
+    ),
+    radial-gradient(
+      circle at 10% 56%,
+      hsla(77, 0%, 3%, 0.05) 0%,
+      hsla(77, 0%, 3%, 0.05) 82%,
+      transparent 82%,
+      transparent 90%,
+      transparent 90%,
+      transparent 100%
+    ),
+    radial-gradient(
+      circle at 42% 35%,
+      hsla(77, 0%, 3%, 0.05) 0%,
+      hsla(77, 0%, 3%, 0.05) 22%,
+      transparent 22%,
+      transparent 77%,
+      transparent 77%,
+      transparent 100%
+    ),
+    radial-gradient(
+      circle at 26% 86%,
+      hsla(77, 0%, 3%, 0.05) 0%,
+      hsla(77, 0%, 3%, 0.05) 17%,
+      transparent 17%,
+      transparent 52%,
+      transparent 52%,
+      transparent 100%
+    ),
+    radial-gradient(
+      circle at 52% 88%,
+      hsla(77, 0%, 3%, 0.05) 0%,
+      hsla(77, 0%, 3%, 0.05) 49%,
+      transparent 49%,
+      transparent 70%,
+      transparent 70%,
+      transparent 100%
+    ),
+    radial-gradient(
+      circle at 62% 41%,
+      hsla(77, 0%, 3%, 0.05) 0%,
+      hsla(77, 0%, 3%, 0.05) 14%,
+      transparent 14%,
+      transparent 45%,
+      transparent 45%,
+      transparent 100%
+    ),
+    radial-gradient(
+      circle at 54% 59%,
+      hsla(77, 0%, 3%, 0.05) 0%,
+      hsla(77, 0%, 3%, 0.05) 42%,
+      transparent 42%,
+      transparent 86%,
+      transparent 86%,
+      transparent 100%
+    ),
+    linear-gradient(135deg, hsl(196, 0%, 96%), hsl(196, 0%, 96%));
+}
+.todo-app {
+  width: 100%;
+  max-width: 540px;
+  /* From https://css.glass */
+  background: rgba(255, 255, 255, 0.22);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(7.1px);
+  -webkit-backdrop-filter: blur(7.1px);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  margin: 100px auto 20px;
+  padding: 40px 30px 70px;
+  border-radius: 10px;
+}
+.todo-app h2 {
+  color: #333;
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.todo-app h2 img {
+  width: 30px;
+  margin-left: 10px;
+}
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 30px;
+  padding-left: 20px;
+  margin-bottom: 25px;
+  background: #fff;
+}
+input {
+  flex: 1;
+  border: none;
+  outline: none;
+  background: transparent;
+  padding: 10px;
+  font-weight: 14px;
+}
+button {
+  border: none;
+  outline: none;
+  background: #ff5645;
+  padding: 18px 50px;
+  color: #fff;
+  font-size: 22px;
+  border-radius: 40px;
+  cursor: pointer;
+}
+ul li {
+  list-style: none;
+  font-size: 17px;
+  padding: 12px 8px 12px 50px;
+  user-select: none;
+  cursor: pointer;
+  position: relative;
+}
+ul li::before {
+  content: "";
+  position: absolute;
+  width: 28px;
+  height: 28px;
+  background: #fff;
+  border-radius: 50%;
+  background-image: url(image/unchecked.png);
+  background-size: cover;
+  background-position: center;
+  top: 12px;
+  left: 8px;
+}
+ul li.checked {
+  color: #555;
+  text-decoration: line-through;
+}
+ul li.checked::before {
+  background-image: url(image/checked.png);
+}
+ul li span {
+  position: absolute;
+  right: 0;
+  top: 5px;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  font-size: 22px;
+  line-height: 40px;
+  color: #555;
+  border-radius: 50%;
+}
+ul li span:hover {
+  background: #edeef0;
+}
+@media (max-width: 776px) {
+  .todo-app {
+    width: 80%;
+  }
+  input {
+    font-weight: 12px;
+    padding: 0px;
+  }
+  button {
+    padding: 8px 12px;
+    font-size: 12px;
+  }
+}
